@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MARY AKSHARA (25009401) Gallery</h1>
+  </header>
+
+  <div class="gallery">
+    
+    <div class="photo"><img src="img.jpg1.png"  onclick="openModal(this)"></div>
+    <div class="photo"><img src="img.jpg2.png"  onclick="openModal(this)"></div>
+    <div class="photo"><img src="img.jpg3.png"  onclick="openModal(this)"></div>
+    <div class="photo"><img src="img.jpg4.png"  onclick="openModal(this)"></div>
+    <div class="photo"><img src="img.jpg5.png"  onclick="openModal(this)"></div>
+    
+    
+  </div>
+
+  <footer>
+    <p>My Gallery App 
+         Designed by MARY AKSHARA(25009401)</p>
+  </footer>
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="">
+  </div>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById("myModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+     
+    </script>
+</body>
+</html>
+
